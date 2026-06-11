@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Intelligence Operating System™ | Srikanth K.</title>
+<meta name="description" content="The Enterprise Intelligence Operating System™ — your structured path to Enterprise Intelligence Fabric™. A self-learning management layer that makes every AI project faster, cheaper, safer, and smarter.">
+<meta property="og:title" content="Enterprise Intelligence Operating System™ | Srikanth K.">
+<meta property="og:description" content="Every AI project should make the next one better. The Enterprise Intelligence OS™ is the management layer that makes it happen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sk4all.github.io/enterprise-intelligence-os/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enterprise Intelligence Operating System™">
+<meta name="twitter:description" content="Your structured path to Enterprise Intelligence Fabric™ — Srikanth K.">
+<link rel="canonical" href="https://sk4all.github.io/enterprise-intelligence-os/">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --blue: #1B4FE3;
+  --blue-pale: #EFF6FF;
+  --blue-tint: #DBEAFE;
+  --navy: #0D1B3E;
+  --navy-mid: #1A2D5A;
+  --cyan: #06B6D4;
+  --cyan-pale: #ECFEFF;
+  --green: #059669;
+  --green-pale: #D1FAE5;
+  --amber: #D97706;
+  --amber-pale: #FEF3C7;
+  --white: #FFFFFF;
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', -apple-system, sans-serif;
+  color: var(--gray-800);
+  background: var(--white);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 0 60px;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { font-size: 13px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; text-decoration: none; }
+.nav-brand span { color: var(--blue); }
+.nav-links { display: flex; gap: 0; }
+.nav-links a {
+  font-size: 11px; font-weight: 600; color: var(--gray-600);
+  text-decoration: none; letter-spacing: 0.3px;
+  padding: 0 14px; height: 56px;
+  display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 75% 25%, rgba(27,79,227,0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 15% 80%, rgba(6,182,212,0.10) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 100px 80px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: calc(100vh - 120px);
+  max-width: 900px;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--cyan); margin-bottom: 48px;
+}
+.hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--cyan); }
+.hero-h1 {
+  font-size: 72px; font-weight: 900;
+  letter-spacing: -2.5px; line-height: 0.95;
+  color: var(--white); margin-bottom: 16px;
+}
+.hero-h1 .accent { color: var(--blue); }
+.hero-path {
+  font-size: 18px; font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 48px; letter-spacing: -0.2px;
+}
+.hero-path em { color: var(--cyan); font-style: normal; font-weight: 600; }
+.hero-desc {
+  font-size: 18px; font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  max-width: 580px; line-height: 1.75;
+  margin-bottom: 56px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 72px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: var(--white);
+  font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+  padding: 14px 28px; text-decoration: none;
+  border: none; cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: #1340C4; }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+  padding: 14px 28px; text-decoration: none;
+  transition: background 0.15s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.12); }
+.hero-thesis {
+  max-width: 620px;
+  padding: 24px 32px;
+  background: rgba(27,79,227,0.12);
+  border: 1px solid rgba(27,79,227,0.28);
+  border-left: 3px solid var(--blue);
+}
+.hero-thesis .t-label {
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.3); margin-bottom: 10px;
+}
+.hero-thesis .t-text {
+  font-size: 18px; font-weight: 700;
+  color: var(--white); line-height: 1.45;
+}
+.hero-thesis .t-text em { color: var(--blue); font-style: normal; }
+.hero-stats {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.hero-stat {
+  padding: 28px 36px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat .s-num {
+  font-size: 38px; font-weight: 900;
+  letter-spacing: -1.5px; color: var(--blue);
+  line-height: 1; margin-bottom: 5px;
+}
+.hero-stat .s-label {
+  font-size: 11px; font-weight: 500;
+  color: rgba(255,255,255,0.35); line-height: 1.4;
+}
+
+/* ── SECTION ── */
+.section { padding: 88px 80px; border-bottom: 1px solid var(--gray-200); }
+.section-alt { background: var(--gray-50); }
+.section-dark { background: var(--navy); color: var(--white); }
+
+.eyebrow {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.eyebrow::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--blue); opacity: 0.4; }
+.section-dark .eyebrow { color: var(--cyan); }
+.section-dark .eyebrow::after { background: var(--cyan); }
+.section-h {
+  font-size: 44px; font-weight: 900;
+  letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--navy); margin-bottom: 16px;
+}
+.section-dark .section-h { color: var(--white); }
+.section-lead {
+  font-size: 17px; color: var(--gray-600);
+  max-width: 660px; line-height: 1.75; margin-bottom: 56px;
+}
+.section-dark .section-lead { color: rgba(255,255,255,0.5); }
+
+/* ── INSIGHT BOX ── */
+.insight {
+  background: var(--blue-pale);
+  border-left: 3px solid var(--blue);
+  padding: 20px 26px; margin-bottom: 40px;
+}
+.insight-label {
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 7px;
+}
+.insight p { font-size: 14px; line-height: 1.7; color: var(--navy); }
+.insight strong { font-weight: 700; }
+
+/* ── GRIDS ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+/* ── CARDS ── */
+.card { background: var(--white); border: 1px solid var(--gray-200); padding: 28px; }
+.card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.card p { font-size: 13px; line-height: 1.65; color: var(--gray-600); }
+.pill {
+  display: inline-block; font-size: 9px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 10px; margin-bottom: 14px;
+}
+.pill-blue { background: var(--blue-tint); color: var(--blue); }
+.pill-cyan { background: var(--cyan-pale); color: #0E7490; }
+.pill-green { background: var(--green-pale); color: var(--green); }
+.pill-amber { background: var(--amber-pale); color: var(--amber); }
+.rule { height: 1px; background: var(--gray-200); margin: 48px 0; }
+
+/* ── LEVEL STRIP ── */
+.level-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; }
+.level-box {
+  padding: 28px 20px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  cursor: default;
+}
+.level-box:last-child { border-right: none; }
+.level-box .lv-num {
+  font-size: 32px; font-weight: 900;
+  letter-spacing: -1px; line-height: 1;
+  margin-bottom: 6px;
+}
+.level-box .lv-score { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+.level-box .lv-name { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; }
+.lv-0 .lv-num { color: rgba(255,255,255,0.15); } .lv-0 .lv-score { color: #EF4444; } .lv-0 .lv-name { color: rgba(255,255,255,0.25); }
+.lv-1 .lv-num { color: rgba(255,255,255,0.15); } .lv-1 .lv-score { color: #F59E0B; } .lv-1 .lv-name { color: rgba(255,255,255,0.25); }
+.lv-2 .lv-num { color: rgba(255,255,255,0.15); } .lv-2 .lv-score { color: #EAB308; } .lv-2 .lv-name { color: rgba(255,255,255,0.25); }
+.lv-3 .lv-num { color: var(--blue); } .lv-3 .lv-score { color: var(--cyan); } .lv-3 .lv-name { color: rgba(255,255,255,0.5); }
+.lv-4 .lv-num { color: var(--blue); } .lv-4 .lv-score { color: #10B981; } .lv-4 .lv-name { color: rgba(255,255,255,0.5); }
+.lv-5 { background: rgba(6,182,212,0.07); border: 1px solid rgba(6,182,212,0.2); }
+.lv-5 .lv-num { color: var(--cyan); } .lv-5 .lv-score { color: var(--cyan); } .lv-5 .lv-name { color: rgba(255,255,255,0.65); }
+
+/* ── FLOW ── */
+.flow-wrap {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 40px; margin-bottom: 40px;
+}
+.flow-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 28px;
+}
+.flow-nodes {
+  display: flex; align-items: flex-start;
+  gap: 0; overflow-x: auto; padding-bottom: 4px;
+}
+.fn { flex: 1; min-width: 96px; display: flex; flex-direction: column; align-items: center; }
+.fn-box {
+  width: calc(100% - 10px);
+  padding: 12px 6px; text-align: center;
+  font-size: 10px; font-weight: 700;
+  color: var(--navy); line-height: 1.3;
+  background: var(--white);
+  border: 1.5px solid var(--blue);
+}
+.fn-box.hi { background: var(--blue); color: var(--white); }
+.fn-sub {
+  font-size: 9px; color: var(--gray-400);
+  margin-top: 6px; text-align: center;
+  line-height: 1.4; padding: 0 4px;
+}
+.fa {
+  display: flex; align-items: center;
+  min-width: 22px; justify-content: center;
+  font-size: 14px; color: var(--blue); opacity: 0.4;
+  padding-bottom: 26px;
+}
+
+/* ── SECURITY BAND ── */
+.sec-band {
+  background: var(--navy);
+  padding: 56px 80px;
+  position: relative; overflow: hidden;
+}
+.sec-band::before {
+  content: 'SECURITY';
+  position: absolute; right: 60px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 140px; font-weight: 900;
+  letter-spacing: -4px;
+  color: rgba(255,255,255,0.025);
+  pointer-events: none;
+}
+.sec-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--cyan); margin-bottom: 14px;
+}
+.sec-band h2 {
+  font-size: 34px; font-weight: 800;
+  color: var(--white); margin-bottom: 12px;
+  letter-spacing: -0.8px;
+}
+.sec-band p {
+  font-size: 15px; color: rgba(255,255,255,0.48);
+  max-width: 620px; line-height: 1.75;
+}
+.sec-pillars {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 12px; margin-top: 40px;
+}
+.sec-pillar {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-top: 2px solid var(--blue);
+  padding: 20px 16px; text-align: center;
+}
+.sec-pillar .sp-icon { font-size: 22px; margin-bottom: 10px; }
+.sec-pillar .sp-name { font-size: 11px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.sec-pillar .sp-desc { font-size: 10px; color: rgba(255,255,255,0.3); line-height: 1.4; }
+
+/* ── METRICS ── */
+.metric-card { background: var(--white); border: 1px solid var(--gray-200); padding: 24px; }
+.m-val { font-size: 42px; font-weight: 900; letter-spacing: -2px; color: var(--blue); line-height: 1; }
+.m-name { font-size: 13px; font-weight: 700; color: var(--navy); margin: 6px 0 4px; }
+.m-desc { font-size: 12px; color: var(--gray-400); line-height: 1.5; }
+
+/* ── WHAT SMARTER ── */
+.smart-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--blue);
+  padding: 24px;
+}
+.smart-card.sec-card { border-top-color: var(--cyan); }
+.s-entity { font-size: 17px; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
+.s-mech { font-size: 13px; color: var(--gray-600); line-height: 1.65; margin-bottom: 12px; }
+.s-signal { font-size: 10px; font-weight: 700; color: var(--green); letter-spacing: 0.5px; }
+
+/* ── MATURITY ROWS ── */
+.mat-row {
+  display: grid; grid-template-columns: 68px 1fr;
+  border: 1px solid var(--gray-200); border-top: none;
+}
+.mat-row:first-child { border-top: 1px solid var(--gray-200); }
+.mat-num {
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px 0;
+}
+.mat-num .mn { font-size: 26px; font-weight: 900; color: rgba(255,255,255,0.15); }
+.mat-num.active .mn { color: var(--blue); }
+.mat-num.peak .mn { color: var(--cyan); }
+.mat-body { padding: 22px 28px; background: var(--white); }
+.mat-row.active .mat-body { background: var(--blue-pale); }
+.mat-row.peak .mat-body { background: linear-gradient(135deg, #EFF6FF 0%, #ECFEFF 100%); }
+.mat-body h3 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+.mat-score { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--blue); margin-bottom: 8px; }
+.mat-body p { font-size: 13px; color: var(--gray-600); line-height: 1.65; margin-bottom: 10px; }
+.mchips { display: flex; flex-wrap: wrap; gap: 5px; }
+.mc {
+  font-size: 10px; font-weight: 600;
+  padding: 3px 9px;
+  background: var(--gray-100); color: var(--gray-600);
+}
+.mc.g { background: var(--green-pale); color: var(--green); }
+.mc.b { background: var(--blue-tint); color: var(--blue); }
+
+/* ── SCORE ── */
+.score-ring-area { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.score-ring-wrap { position: relative; width: 200px; height: 200px; }
+.score-ring-wrap svg { transform: rotate(-90deg); }
+.score-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%); text-align: center;
+}
+.sc-val { font-size: 48px; font-weight: 900; letter-spacing: -2px; color: var(--blue); line-height: 1; }
+.sc-lbl { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+.dim-row { display: grid; grid-template-columns: 1fr 160px 40px; align-items: center; gap: 12px; margin-bottom: 18px; }
+.dim-label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); }
+.dim-bar { height: 6px; background: rgba(255,255,255,0.08); }
+.dim-fill { height: 100%; }
+.dim-val { font-size: 13px; font-weight: 800; color: var(--blue); text-align: right; }
+.dim-note { font-size: 10px; color: rgba(255,255,255,0.22); margin-top: -12px; margin-bottom: 8px; }
+
+/* ── ROADMAP ── */
+.rm-row {
+  display: grid; grid-template-columns: 168px 1fr;
+  border: 1px solid var(--gray-200); border-top: none;
+}
+.rm-row:first-child { border-top: 1px solid var(--gray-200); }
+.rm-phase {
+  background: var(--navy);
+  padding: 24px 20px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.rm-ph-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 4px; }
+.rm-ph-dur { font-size: 16px; font-weight: 800; color: var(--white); line-height: 1.2; }
+.rm-body { padding: 22px 28px; background: var(--white); }
+.rm-body h3 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+.rd { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--gray-600); line-height: 1.5; margin-bottom: 7px; }
+.rd::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.rd strong { color: var(--navy); }
+
+/* ── CLOSING ── */
+.closing-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.07); margin-bottom: 52px; }
+.cq { padding: 32px 28px; border-right: 1px solid rgba(255,255,255,0.06); }
+.cq:last-child { border-right: none; }
+.cq .cq-n { font-size: 48px; font-weight: 900; letter-spacing: -2px; color: var(--blue); line-height: 1; margin-bottom: 12px; }
+.cq h3 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.cq p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; }
+.final-cta {
+  background: rgba(27,79,227,0.12);
+  border: 1px solid rgba(27,79,227,0.22);
+  padding: 48px; text-align: center;
+}
+.final-cta .fc-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); margin-bottom: 18px; }
+.final-cta h2 {
+  font-size: 38px; font-weight: 900;
+  letter-spacing: -1.2px; line-height: 1.15;
+  color: var(--white); margin-bottom: 16px;
+}
+.final-cta h2 em { color: var(--blue); font-style: normal; }
+.final-cta p { font-size: 15px; color: rgba(255,255,255,0.45); max-width: 640px; margin: 0 auto 32px; line-height: 1.75; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* ── TABLE ── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  background: var(--navy); color: rgba(255,255,255,0.85);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 12px 16px; text-align: left;
+}
+tbody td {
+  padding: 12px 16px; vertical-align: top;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700); line-height: 1.55;
+}
+tbody tr:nth-child(even) td { background: var(--gray-50); }
+tbody tr:last-child td { border-bottom: none; }
+td strong { color: var(--navy); font-weight: 700; }
+.t-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; background: var(--green-pale); color: var(--green); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0A0F1E;
+  padding: 48px 80px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.f-brand { font-size: 14px; font-weight: 800; color: var(--white); margin-bottom: 5px; }
+.f-meta { font-size: 12px; color: rgba(255,255,255,0.3); }
+.f-links { display: flex; flex-direction: column; gap: 4px; text-align: right; }
+.f-links a { font-size: 12px; color: var(--cyan); text-decoration: none; }
+.f-links a:hover { color: var(--white); }
+
+@media (max-width: 900px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero-content { padding: 60px 24px 40px; }
+  .hero-h1 { font-size: 44px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 56px 24px; }
+  .sec-band { padding: 48px 24px; }
+  .g2, .g3, .g4 { grid-template-columns: 1fr; }
+  .sec-pillars { grid-template-columns: repeat(2, 1fr); }
+  .level-strip { grid-template-columns: repeat(3, 1fr); }
+  .closing-3 { grid-template-columns: 1fr; }
+  .rm-row { grid-template-columns: 1fr; }
+  .rm-phase { display: none; }
+  footer { flex-direction: column; gap: 24px; text-align: center; }
+  .f-links { text-align: center; }
+  .score-layout { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="#" class="nav-brand">Enterprise <span>Intelligence OS™</span></a>
+  <div class="nav-links">
+    <a href="#problem">Challenge</a>
+    <a href="#security">Security</a>
+    <a href="#loop">Self-Learning</a>
+    <a href="#maturity">Maturity</a>
+    <a href="#score">AI OS Score</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="https://linkedin.com/in/s-agi" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://sk4all.substack.com" target="_blank" rel="noopener">Substack</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Enterprise Intelligence OS™ · 2026 Reference Architecture</div>
+    <h1 class="hero-h1">Enterprise<br>Intelligence<br><span class="accent">Operating<br>System™</span></h1>
+    <p class="hero-path">Your structured path to <em>Enterprise Intelligence Fabric™</em></p>
+    <p class="hero-desc">A self-learning management layer that ensures every AI project leaves your enterprise with reusable assets — making every future project faster, cheaper, safer, and smarter.</p>
+    <div class="hero-ctas">
+      <a href="#problem" class="btn-primary">Explore the Framework →</a>
+      <a href="https://sk4all.substack.com" target="_blank" rel="noopener" class="btn-secondary">Follow on Substack</a>
+      <a href="https://linkedin.com/in/s-agi" target="_blank" rel="noopener" class="btn-secondary">Connect on LinkedIn</a>
+    </div>
+    <div class="hero-thesis">
+      <div class="t-label">Central Thesis</div>
+      <div class="t-text">
+        AI Capability ≠ Competitive Advantage<br>
+        <em>Learning Velocity = Competitive Advantage</em>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="s-num">15%</div>
+      <div class="s-label">Target delivery velocity compression per improvement cycle</div>
+    </div>
+    <div class="hero-stat">
+      <div class="s-num">40%</div>
+      <div class="s-label">Target asset reuse rate at Maturity Level 3</div>
+    </div>
+    <div class="hero-stat">
+      <div class="s-num">L0→L5</div>
+      <div class="s-label">Maturity path: Disconnected Projects to Self-Learning Enterprise</div>
+    </div>
+    <div class="hero-stat">
+      <div class="s-num">6×</div>
+      <div class="s-label">Layers of compound improvement across the Intelligence OS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 01 PROBLEM ── -->
+<section class="section" id="problem">
+  <div class="eyebrow">01 · The Strategic Problem</div>
+  <h2 class="section-h">Learning Evaporates.<br>Every Single Time.</h2>
+  <p class="section-lead">Every AI project produces prompts, evaluation data, security controls, workflow patterns, and hard-won institutional knowledge. In the vast majority of enterprises, all of it disappears when the project closes. The next team starts from zero. This is not a technology problem. It is an operating model problem.</p>
+
+  <div class="insight">
+    <div class="insight-label">The Core Question That Changes Everything</div>
+    <p>Most enterprises ask: <strong>"Did this AI project generate value?"</strong> The best AI-native organizations ask a different question: <strong>"Did this AI project make the next one cheaper, faster, safer, and smarter?"</strong> That is a fundamentally different operating model — and it is why Enterprise Learning Velocity™ matters more than model selection.</p>
+  </div>
+
+  <div class="g3">
+    <div class="card">
+      <div class="pill pill-amber">Cost Failure</div>
+      <h3>Repeated Learning Is the Real Hidden Cost</h3>
+      <p>Teams rediscover the same prompts, rebuild the same evaluation sets, and recreate governance controls that already exist elsewhere. Token spend appears on the invoice. Wasted learning never appears on any dashboard — yet it dwarfs token costs at enterprise scale.</p>
+    </div>
+    <div class="card">
+      <div class="pill pill-blue">Velocity Failure</div>
+      <h3>Zero Compounding Means Flat Delivery</h3>
+      <p>Without structured asset reuse, AI project timelines do not compress over time. Project 50 takes as long to build as Project 1. The learning from 49 prior projects is inaccessible, undiscoverable, or simply gone.</p>
+    </div>
+    <div class="card">
+      <div class="pill" style="background:var(--purple-pale,#EDE9FE);color:#7C3AED;">Risk Failure</div>
+      <h3>No Institutional Memory Means Repeated Risk</h3>
+      <p>Security exceptions get re-approved. Governance violations recur. The same failure modes appear in new agents because no system captures and propagates what went wrong. The enterprise is re-experiencing its AI mistakes, not learning from them.</p>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="g2">
+    <div class="card" style="border-left:3px solid #DC2626;">
+      <div class="pill" style="background:#FEE2E2;color:#DC2626;">Current State · Project Thinking</div>
+      <h3 style="margin-bottom:14px;">Did this AI project generate value?</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="rd" style="color:var(--gray-600);">Output measured at the project boundary only</div>
+        <div class="rd" style="color:var(--gray-600);">Institutional knowledge lives in individual heads</div>
+        <div class="rd" style="color:var(--gray-600);">Assets owned and siloed by one team</div>
+        <div class="rd" style="color:var(--gray-600);">Security controls rebuilt from scratch each engagement</div>
+        <div class="rd" style="color:var(--gray-600);">Learning evaporates at project close</div>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--green);">
+      <div class="pill pill-green">Target State · OS Thinking</div>
+      <h3 style="margin-bottom:14px;">Did this project make the next one better?</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="rd" style="color:var(--gray-600);">Compound improvement measured across all projects</div>
+        <div class="rd" style="color:var(--gray-600);">Knowledge captured in structured, versioned repositories</div>
+        <div class="rd" style="color:var(--gray-600);">Assets shared and governed enterprise-wide</div>
+        <div class="rd" style="color:var(--gray-600);">Security controls applied by default — not rebuilt each time</div>
+        <div class="rd" style="color:var(--gray-600);">Every project improves the Intelligence OS itself</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 02 SECURITY ── -->
+<div class="sec-band" id="security">
+  <div class="sec-label">02 · Security · The Foundation Layer</div>
+  <h2>Security Is Not a Layer.<br>It Is the Foundation.</h2>
+  <p>In the Enterprise Intelligence OS™, security controls are first-class reusable assets — not afterthoughts applied at deployment. Every agent, workflow, prompt, and evaluation pipeline operates under a security control that was designed once, validated once, and reused across hundreds of projects. The goal is not more security reviews. It is fewer — because the controls already exist and are already proven.</p>
+  <div class="sec-pillars">
+    <div class="sec-pillar">
+      <div class="sp-icon">🔐</div>
+      <div class="sp-name">Identity &amp; Access</div>
+      <div class="sp-desc">Agent identity, least-privilege access, zero-trust enforcement at every tool boundary</div>
+    </div>
+    <div class="sec-pillar">
+      <div class="sp-icon">🛡️</div>
+      <div class="sp-name">Prompt Security</div>
+      <div class="sp-desc">Injection detection, jailbreak guardrails, output sanitization — versioned and reusable</div>
+    </div>
+    <div class="sec-pillar">
+      <div class="sp-icon">🔍</div>
+      <div class="sp-name">Data Governance</div>
+      <div class="sp-desc">PII masking, data classification, lineage tracking, residency controls in every pipeline</div>
+    </div>
+    <div class="sec-pillar">
+      <div class="sp-icon">📡</div>
+      <div class="sp-name">Full Observability</div>
+      <div class="sp-desc">Complete trace capture on every AI decision — inputs, outputs, tool calls, escalations</div>
+    </div>
+    <div class="sec-pillar">
+      <div class="sp-icon">⚖️</div>
+      <div class="sp-name">Compliance Controls</div>
+      <div class="sp-desc">EU AI Act, SOX, HIPAA, GDPR — auto-applied by risk tier, mapped to every asset</div>
+    </div>
+    <div class="sec-pillar">
+      <div class="sp-icon">🚨</div>
+      <div class="sp-name">Incident Learning</div>
+      <div class="sp-desc">Every security incident extracted as a new reusable control — eliminating recurrence at scale</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 03 SELF-LEARNING LOOP ── -->
+<section class="section section-alt" id="loop">
+  <div class="eyebrow">03 · Self-Learning Architecture</div>
+  <h2 class="section-h">Project A Improves<br>Project B. Automatically.</h2>
+  <p class="section-lead">The Self-Learning Loop is the core engineering innovation of the Enterprise Intelligence OS™. It replaces tribal knowledge with a structured pipeline that extracts institutional value from every completed project and makes it available to the next — systematically, not opportunistically.</p>
+
+  <div class="flow-wrap">
+    <div class="flow-label">The Compound Improvement Loop</div>
+    <div class="flow-nodes">
+      <div class="fn"><div class="fn-box hi">AI Project<br>Executes</div><div class="fn-sub">Agent runs, decisions logged, costs tracked</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Observe<br>&amp; Trace</div><div class="fn-sub">Telemetry, cost, latency, security events</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Evaluate<br>&amp; Score</div><div class="fn-sub">Evals vs. ground truth, human feedback</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Extract<br>Assets</div><div class="fn-sub">What worked → flagged for standardization</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Standardize<br>&amp; Validate</div><div class="fn-sub">Template, version, security-review, document</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Publish to<br>Registry</div><div class="fn-sub">Indexed, searchable, discoverable enterprise-wide</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box">Next Project<br>Reuses</div><div class="fn-sub">Starts ahead of where Project A began</div></div>
+      <div class="fa">→</div>
+      <div class="fn"><div class="fn-box hi">Compound<br>Improvement</div><div class="fn-sub">OS gets smarter every cycle</div></div>
+    </div>
+  </div>
+
+  <h3 style="font-size:22px;font-weight:800;color:var(--navy);margin-bottom:20px;">How Project A Improves Project B</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>What Project A Produces</th>
+          <th>How It Enters the OS</th>
+          <th>What Project B Receives</th>
+          <th>Business Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>High-scoring prompt variant</strong></td>
+          <td>Evaluation pipeline auto-promotes above threshold — no manual discovery required</td>
+          <td>Certified prompt, pre-validated against domain ground truth</td>
+          <td><span class="t-tag">2–4 days saved</span></td>
+        </tr>
+        <tr>
+          <td><strong>Novel orchestration pattern</strong></td>
+          <td>Architect review at project close → template extracted, documented with production metrics</td>
+          <td>Agent template with known latency, cost profile, and production lineage</td>
+          <td><span class="t-tag">1–2 weeks saved</span></td>
+        </tr>
+        <tr>
+          <td><strong>Security exception + resolution</strong></td>
+          <td>Incident record → root cause analysis → new reusable control published</td>
+          <td>Control pre-applied by default. No re-discovery. No repeat exception approval.</td>
+          <td><span class="t-tag">Risk eliminated</span></td>
+        </tr>
+        <tr>
+          <td><strong>847 labeled evaluation examples</strong></td>
+          <td>Post-project review → versioned dataset published to evaluation repository</td>
+          <td>Comprehensive evaluation infrastructure available from day one</td>
+          <td><span class="t-tag">3–5 weeks saved</span></td>
+        </tr>
+        <tr>
+          <td><strong>30% cost reduction via model routing</strong></td>
+          <td>FinOps review captures routing logic as a reusable cost control pattern</td>
+          <td>Pre-configured cost controls deployed by default</td>
+          <td><span class="t-tag">30% cost reduction</span></td>
+        </tr>
+        <tr>
+          <td><strong>Compliance approval workflow</strong> (first time: 10 days)</td>
+          <td>Governance sign-off standardized into reusable approval workflow template</td>
+          <td>Template-driven process — 10 days becomes 1 day on every subsequent use</td>
+          <td><span class="t-tag">9 days saved</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── 04 WHAT GETS SMARTER ── -->
+<section class="section" id="smarter">
+  <div class="eyebrow">04 · What Actually Gets Smarter?</div>
+  <h2 class="section-h">Six Layers.<br>All of Them Improve.</h2>
+  <p class="section-lead">The base model does not change. What improves is everything the model operates within — the context it receives, the controls applied to it, the evaluations used to assess it, and the organizational system that governs it. This is the compounding mechanism that makes Enterprise Learning Velocity™ a durable structural moat.</p>
+
+  <div class="g3">
+    <div class="smart-card">
+      <div class="s-entity">📝 Prompts</div>
+      <div class="s-mech">Prompts improve through continuous evaluation against growing ground truth datasets. High-scoring variants are extracted, versioned, and promoted through the asset tier system. The prompt library becomes more precise and domain-specific with every project cycle — without any model retraining.</div>
+      <div class="s-signal">↑ Eval score per prompt over time · Mechanism: eval-driven promotion pipeline</div>
+    </div>
+    <div class="smart-card">
+      <div class="s-entity">🤖 Agents</div>
+      <div class="s-mech">Agent templates improve through production telemetry. Patterns achieving lower intervention rates are promoted and standardized. Human feedback on agent failures propagates systematically to template documentation — not ad hoc. LangGraph checkpointing patterns inform durable architectures over time.</div>
+      <div class="s-signal">↓ Intervention rate per agent class · Mechanism: telemetry-driven template evolution</div>
+    </div>
+    <div class="smart-card">
+      <div class="s-entity">🔄 Workflows</div>
+      <div class="s-mech">Workflow patterns improve as the business process blueprint library expands. New projects inherit proven workflows optimized by prior implementations. Future teams inherit the decisions — not just the code — through structured Architecture Decision Records that travel with every asset.</div>
+      <div class="s-signal">↑ Workflow reuse rate · Mechanism: structured decision records and template library</div>
+    </div>
+    <div class="smart-card sec-card">
+      <div class="s-entity">🔐 Security Controls</div>
+      <div class="s-mech">The security posture improves with every incident, exception, and red team exercise. Each security event is extracted as a new versioned control added to the library. What caused a breach in Project 3 becomes a default protection in Projects 4 through 400. Security compounds the same way code does.</div>
+      <div class="s-signal">↓ Security exceptions per project · Mechanism: incident-to-control extraction pipeline</div>
+    </div>
+    <div class="smart-card">
+      <div class="s-entity">🧪 Evaluations</div>
+      <div class="s-mech">The evaluation infrastructure is the fastest-improving layer. Each project adds ground truth examples, adversarial red team cases, and human-labeled corrections. The eval suite becomes more comprehensive and discriminating over time — making it progressively harder to deploy a low-quality agent without detection.</div>
+      <div class="s-signal">↑ Evaluation coverage score · Mechanism: mandatory dataset contribution at every project close</div>
+    </div>
+    <div class="smart-card" style="border-top-color:var(--cyan);">
+      <div class="s-entity">🏢 The Enterprise</div>
+      <div class="s-mech">The enterprise as an institution develops compounding AI intelligence. Domain ontologies grow richer. Knowledge graphs become denser. New hires inherit hundreds of projects worth of structured, indexed, searchable institutional knowledge on day one. The organization's AI capability compounds independent of any individual leaving.</div>
+      <div class="s-signal">↑ Enterprise Intelligence OS Score™ quarter over quarter · Mechanism: compound asset accumulation across all six layers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 05 METRICS ── -->
+<section class="section section-alt" id="metrics">
+  <div class="eyebrow">05 · Enterprise Learning Velocity™</div>
+  <h2 class="section-h">Measuring the Rate of<br>Institutional Learning.</h2>
+  <p class="section-lead">Enterprise Learning Velocity™ is the primary performance indicator of the Intelligence OS. It measures the rate at which the organization converts AI execution into reusable assets — and translates those assets into delivery, cost, risk, and quality improvements.</p>
+  <div class="g4" style="margin-bottom:48px;">
+    <div class="metric-card"><div class="m-val">ARc</div><div class="m-name">Asset Creation Rate</div><div class="m-desc">New reusable assets generated per project per quarter. Target: minimum 5 assets at project close.</div></div>
+    <div class="metric-card"><div class="m-val">ARu</div><div class="m-name">Asset Reuse Rate</div><div class="m-desc">Percentage of deliverables built from existing assets versus net-new. Target: 40%+ at Level 3.</div></div>
+    <div class="metric-card"><div class="m-val">AAd</div><div class="m-name">Adoption Rate</div><div class="m-desc">Percentage of published assets actively used within 6 months. Target: 30%+ active adoption.</div></div>
+    <div class="metric-card"><div class="m-val">SRt</div><div class="m-name">Standardization Rate</div><div class="m-desc">Percentage of contributed assets passing standardization review. Target: 70%+.</div></div>
+  </div>
+
+  <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:18px;">The 15% Improvement Framework</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Dimension</th><th>Metric</th><th>Target</th><th>Enabling Condition</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Delivery Velocity</strong></td><td>Time to production per project</td><td>−15%</td><td>Asset reuse rate ≥30%</td></tr>
+        <tr><td><strong>Cost Efficiency</strong></td><td>AI operating cost per business outcome</td><td>−15%</td><td>FinOps controls deployed across 5+ projects</td></tr>
+        <tr><td><strong>Security &amp; Risk</strong></td><td>Policy violations per quarter</td><td>−15%</td><td>Security control reuse across 5+ projects</td></tr>
+        <tr><td><strong>Security &amp; Risk</strong></td><td>Security exceptions requiring manual approval</td><td>−15%</td><td>Controls library has 20+ indexed controls</td></tr>
+        <tr><td><strong>Human Effort</strong></td><td>Manual review hours per project</td><td>−15%</td><td>Approval workflow templates reused ≥3 times</td></tr>
+        <tr><td><strong>Asset Reuse</strong></td><td>Reusable asset adoption rate</td><td>+15% per quarter</td><td>Registry operational with ≥20 published assets</td></tr>
+        <tr><td><strong>Agent Quality</strong></td><td>Human intervention rate per agent</td><td>−15%</td><td>Evaluation datasets with 500+ domain examples</td></tr>
+        <tr><td><strong>Agent Quality</strong></td><td>Task completion rate per agent class</td><td>+15%</td><td>Ground truth evaluation pipelines deployed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── 06 MATURITY ── -->
+<section class="section" id="maturity">
+  <div class="eyebrow">06 · Maturity Model · L0 → L5</div>
+  <h2 class="section-h">From Disconnected Projects<br>to Self-Learning Enterprise.</h2>
+  <p class="section-lead">The maturity progression is a structured path. Each level has observable characteristics, measurable indicators, and an explicit readiness signal for advancing. No organization skips levels — each one establishes the operational foundation the next level requires.</p>
+
+  <div>
+    <div class="mat-row">
+      <div class="mat-num"><div class="mn">L0</div></div>
+      <div class="mat-body">
+        <h3>Disconnected AI Projects</h3>
+        <div class="mat-score">AI OS Score: 0–15 · The default state for most enterprises today</div>
+        <p>AI projects operate in complete isolation. No shared assets, governance, or evaluation infrastructure. Every team begins from zero. Security controls are rebuilt per deployment. Learning disappears when the project closes. The organization's AI capability resets with every engagement.</p>
+        <div class="mchips"><span class="mc">No Asset Registry</span><span class="mc">No Shared Prompts</span><span class="mc">Ad-hoc Governance</span><span class="mc">Tribal Knowledge Only</span><span class="mc">Security Rebuilt Per Project</span></div>
+      </div>
+    </div>
+    <div class="mat-row">
+      <div class="mat-num"><div class="mn">L1</div></div>
+      <div class="mat-body">
+        <h3>Managed AI Projects</h3>
+        <div class="mat-score">AI OS Score: 16–35 · Basic visibility established. Compounding has not begun.</div>
+        <p>Projects are tracked and documented. A basic prompt library exists — but is inconsistently used. Policies are written but not enforced systematically. Security controls exist but are not indexed or reused across projects. There is intent to share assets, but no structural mechanism to ensure it happens.</p>
+        <div class="mchips"><span class="mc">Project Tracking</span><span class="mc">Basic Prompt Library</span><span class="mc">Written Policies</span><span class="mc">Manual Evaluations</span><span class="mc g">Advance when: First assets formally published to shared, indexed repository</span></div>
+      </div>
+    </div>
+    <div class="mat-row">
+      <div class="mat-num"><div class="mn">L2</div></div>
+      <div class="mat-body">
+        <h3>Reusable Asset Repository</h3>
+        <div class="mat-score">AI OS Score: 36–55 · Assets exist and are discoverable. Reuse is voluntary.</div>
+        <p>A structured repository exists with versioned prompts, agent templates, governance controls, and evaluation datasets. Teams can find and use assets — but reuse is optional and untracked. No enforceable mechanism ensures assets are extracted from projects at close. The system grows slowly and unevenly.</p>
+        <div class="mchips"><span class="mc">Structured Repositories</span><span class="mc">Versioned Assets</span><span class="mc">Asset Discovery</span><span class="mc">Security Controls Indexed</span><span class="mc g">Advance when: Asset reuse rate reaches 20%+ consistently across 3+ quarters</span></div>
+      </div>
+    </div>
+    <div class="mat-row active">
+      <div class="mat-num active"><div class="mn">L3</div></div>
+      <div class="mat-body">
+        <h3>Enterprise Intelligence Operating System™</h3>
+        <div class="mat-score">AI OS Score: 56–70 · Systematic compounding begins. Learning Velocity™ becomes measurable.</div>
+        <p>The Intelligence OS is fully operational. Asset contribution at project close is mandatory. The Asset Registry is the authoritative enterprise catalog. Evaluation runs continuously in CI/CD pipelines. Governance controls are reused across projects with automated application by risk tier. Security controls are applied by default. The OS measurably improves with every completed project cycle.</p>
+        <div class="mchips"><span class="mc b">Mandatory Asset Contribution</span><span class="mc b">Asset Registry Operational</span><span class="mc b">Continuous Eval in CI/CD</span><span class="mc b">Governance Auto-Applied</span><span class="mc b">Security Controls Auto-Deployed</span><span class="mc b">Cross-Project Reuse Tracked</span><span class="mc g">Advance when: AI OS Score reaches 70 AND intervention rate shows 15%+ downward trend</span></div>
+      </div>
+    </div>
+    <div class="mat-row">
+      <div class="mat-num active"><div class="mn">L4</div></div>
+      <div class="mat-body">
+        <h3>Self-Improving AI Platform</h3>
+        <div class="mat-score">AI OS Score: 71–85 · The platform improves continuously without human intervention per cycle.</div>
+        <p>High-scoring assets are automatically promoted. Underperforming assets are flagged for deprecation. The platform detects when a new project pattern has no matching template and initiates an extraction workflow. Evaluation pipelines run nightly. Security controls version-bump automatically when new regulatory requirements are detected.</p>
+        <div class="mchips"><span class="mc">Automated Asset Promotion</span><span class="mc">Nightly Evaluation Pipelines</span><span class="mc">Self-Updating Knowledge Graph</span><span class="mc">Pattern Gap Detection</span><span class="mc">Security Control Auto-Versioning</span><span class="mc g">Advance when: Delivery velocity compressing 15%+ annually without proportional headcount growth</span></div>
+      </div>
+    </div>
+    <div class="mat-row peak">
+      <div class="mat-num peak"><div class="mn">L5</div></div>
+      <div class="mat-body">
+        <h3>Enterprise Intelligence Fabric™</h3>
+        <div class="mat-score">AI OS Score: 86–100 · Learning Velocity™ is the primary competitive moat. You have arrived.</div>
+        <p>The enterprise itself functions as an intelligent, compounding learning system. The OS predicts which assets a new project will need before the team asks — surfacing curated bundles at kickoff. New engineers are productive in weeks, not months, because hundreds of projects worth of structured intelligence is searchable and indexed. Enterprise Learning Velocity™ is a board-level KPI. No competitor can replicate this through talent acquisition alone — it is structural, not individual.</p>
+        <div class="mchips"><span class="mc b">Predictive Asset Recommendations</span><span class="mc b">Autonomous Knowledge Graph</span><span class="mc b">Learning Capital = Structural Moat</span><span class="mc b">Engineer Onboarding: Weeks, Not Months</span><span class="mc b">AI OS Score 86+</span><span class="mc b">You Have Reached the Fabric</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 07 SCORE ── -->
+<section class="section section-dark" id="score">
+  <div class="eyebrow">07 · Enterprise Intelligence OS Score™</div>
+  <h2 class="section-h">One Board-Ready Number.<br>Six Strategic Dimensions.</h2>
+  <p class="section-lead">The Enterprise Intelligence OS Score™ translates six dimensions of OS maturity into a single trackable, improvable, board-reportable metric. It gives the CTO an observable measure of whether institutional intelligence is compounding — and at what rate.</p>
+
+  <div style="display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center;" class="score-layout">
+    <div class="score-ring-area">
+      <div class="score-ring-wrap">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="18"/>
+          <circle cx="100" cy="100" r="82" fill="none" stroke="#1B4FE3" stroke-width="18" stroke-dasharray="515.22" stroke-dashoffset="144.26" opacity="0.9"/>
+          <circle cx="100" cy="100" r="62" fill="none" stroke="#06B6D4" stroke-width="14" stroke-dasharray="389.56" stroke-dashoffset="155.82" opacity="0.8"/>
+          <circle cx="100" cy="100" r="45" fill="none" stroke="#10B981" stroke-width="12" stroke-dasharray="282.74" stroke-dashoffset="62.20" opacity="0.8"/>
+        </svg>
+        <div class="score-center">
+          <div class="sc-val">68</div>
+          <div class="sc-lbl">EIOS Score™</div>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:rgba(255,255,255,0.25);">Example at Maturity Level 3<br><span style="color:rgba(255,255,255,0.15);">Max: 100 · Level 5 target: 86+</span></div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:16px;">Score Dimensions — Weighted Composite</div>
+      <div class="dim-row"><div class="dim-label">Asset Maturity</div><div class="dim-bar"><div class="dim-fill" style="width:72%;background:#1B4FE3;"></div></div><div class="dim-val">72</div></div>
+      <div class="dim-note">Volume, quality, coverage depth, and versioning of the reusable asset portfolio — weight 20%</div>
+      <div class="dim-row"><div class="dim-label">Reuse Maturity</div><div class="dim-bar"><div class="dim-fill" style="width:60%;background:#06B6D4;"></div></div><div class="dim-val">60</div></div>
+      <div class="dim-note">Reuse rate, adoption velocity, hours saved, and cost avoided through asset consumption — weight 25%</div>
+      <div class="dim-row"><div class="dim-label">Governance Maturity</div><div class="dim-bar"><div class="dim-fill" style="width:78%;background:#10B981;"></div></div><div class="dim-val">78</div></div>
+      <div class="dim-note">Policy coverage, control reuse rate, violation trend, and regulatory audit readiness — weight 20%</div>
+      <div class="dim-row"><div class="dim-label">Platform Maturity</div><div class="dim-bar"><div class="dim-fill" style="width:65%;background:#F59E0B;"></div></div><div class="dim-val">65</div></div>
+      <div class="dim-note">Observability coverage, cost attribution, multi-model and multi-vendor operational depth — weight 15%</div>
+      <div class="dim-row"><div class="dim-label">Evaluation Maturity</div><div class="dim-bar"><div class="dim-fill" style="width:55%;background:#8B5CF6;"></div></div><div class="dim-val">55</div></div>
+      <div class="dim-note">Eval dataset coverage, ground truth volume, continuous pipelines, red team depth — weight 10%</div>
+      <div class="dim-row"><div class="dim-label">Learning Velocity</div><div class="dim-bar"><div class="dim-fill" style="width:68%;background:#EF4444;"></div></div><div class="dim-val">68</div></div>
+      <div class="dim-note">Rate of asset accumulation, standardization throughput, and cross-project compound velocity — weight 10%</div>
+      <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:14px;margin-top:4px;font-size:11px;color:rgba(255,255,255,0.2);">Formula: (Asset × 0.20) + (Reuse × 0.25) + (Governance × 0.20) + (Platform × 0.15) + (Evaluation × 0.10) + (Learning Velocity × 0.10)</div>
+    </div>
+  </div>
+
+  <div style="margin-top:52px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:16px;">Score to Maturity Level Mapping</div>
+    <div class="level-strip">
+      <div class="level-box lv-0"><div class="lv-num">L0</div><div class="lv-score">0–15</div><div class="lv-name">Disconnected</div></div>
+      <div class="level-box lv-1"><div class="lv-num">L1</div><div class="lv-score">16–35</div><div class="lv-name">Managed</div></div>
+      <div class="level-box lv-2"><div class="lv-num">L2</div><div class="lv-score">36–55</div><div class="lv-name">Repository</div></div>
+      <div class="level-box lv-3"><div class="lv-num">L3</div><div class="lv-score">56–70</div><div class="lv-name">Intelligence OS</div></div>
+      <div class="level-box lv-4"><div class="lv-num">L4</div><div class="lv-score">71–85</div><div class="lv-name">Self-Improving</div></div>
+      <div class="level-box lv-5"><div class="lv-num">L5</div><div class="lv-score">86–100</div><div class="lv-name">Intelligence Fabric™</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 08 ROADMAP ── -->
+<section class="section" id="roadmap">
+  <div class="eyebrow">08 · Reference Implementation Roadmap</div>
+  <h2 class="section-h">Six Phases.<br>Foundation to Self-Learning.</h2>
+  <p class="section-lead">The implementation sequence is deliberately ordered. Each phase delivers measurable standalone value. Security controls are established in Phase 1 — not deferred. No phase requires a subsequent phase to demonstrate return on investment.</p>
+
+  <div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 1</div><div class="rm-ph-dur">Weeks 1–6</div></div>
+      <div class="rm-body">
+        <h3>Foundation — Repository Structure, Security Framework, and Asset Charter</h3>
+        <div class="rd"><strong>Deploy the Security Controls Library first</strong> — prompt injection controls, PII masking, audit log schema from day one</div>
+        <div class="rd">Establish repository structure for your tier — Startup, Mid-Market, or Enterprise architecture</div>
+        <div class="rd">Define the Asset Contribution Checklist — the mandatory contract every project fulfills at close</div>
+        <div class="rd">Publish the AI Acceptable Use Policy and Data Handling Policy to the governance repository</div>
+        <div class="rd">Initialize the Asset Registry schema and designate the Asset Steward role</div>
+      </div>
+    </div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 2</div><div class="rm-ph-dur">Weeks 7–16</div></div>
+      <div class="rm-body">
+        <h3>Asset Accumulation — Prompt Library, Agent Templates, and Evaluation Infrastructure</h3>
+        <div class="rd">Migrate all existing prompts into the versioned library with metadata: version, author, eval score, risk tier, usage count</div>
+        <div class="rd">Build the first domain evaluation dataset — minimum 200 labeled, human-validated examples per active domain</div>
+        <div class="rd">Execute the first structured post-project review using the Asset Contribution Checklist</div>
+        <div class="rd">Deploy basic observability: token usage, latency, cost, error rate per project and per agent</div>
+        <div class="rd">Publish the first production-validated agent template with documented performance metrics</div>
+      </div>
+    </div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 3</div><div class="rm-ph-dur">Weeks 17–28</div></div>
+      <div class="rm-body">
+        <h3>Governance Architecture — Controls Library, Approval Templates, and Risk Classification</h3>
+        <div class="rd">Version and index all existing security controls as Tier 2 or Tier 3 reusable assets, classified by risk tier</div>
+        <div class="rd">Build first reusable approval workflow templates — compressing future approvals from 10 days to under 2 days</div>
+        <div class="rd">Deploy the risk classification framework — every agent tagged by risk tier, with controls applied automatically</div>
+        <div class="rd">Implement AI FinOps controls — token budgets per project and team, cost attribution to business outcomes</div>
+        <div class="rd">Establish baseline policy violation rate — the starting point for demonstrating 15% improvement</div>
+      </div>
+    </div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 4</div><div class="rm-ph-dur">Weeks 29–44</div></div>
+      <div class="rm-body">
+        <h3>Platform Maturity — Continuous Evaluation, Knowledge Graph, and Multi-Model Routing</h3>
+        <div class="rd">Integrate evaluation pipelines into CI/CD — no deployment proceeds without passing an evaluation gate</div>
+        <div class="rd">Launch Domain Ontology for at least two active business domains</div>
+        <div class="rd">Build the Knowledge Graph seeded from 10+ completed project artifacts</div>
+        <div class="rd">Implement multi-model routing with automated cost-quality optimization across at minimum two vendors</div>
+        <div class="rd">Compute the first Enterprise Intelligence OS Score™ and communicate to the CTO as a strategic indicator</div>
+      </div>
+    </div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 5</div><div class="rm-ph-dur">Weeks 45–65</div></div>
+      <div class="rm-body">
+        <h3>Self-Improvement — Automated Extraction, Promotion Pipelines, and Pattern Gap Detection</h3>
+        <div class="rd">Deploy eval-driven asset promotion — assets exceeding the score threshold trigger automated pull requests to the library</div>
+        <div class="rd">Implement pattern gap detection — the platform identifies when an incoming project has no matching template</div>
+        <div class="rd">Launch nightly evaluation pipelines across all active agent deployments</div>
+        <div class="rd">Activate the human feedback loop — corrections automatically enrich evaluation datasets</div>
+        <div class="rd">Demonstrate 15% delivery velocity compression versus the Phase 1 baseline</div>
+      </div>
+    </div>
+    <div class="rm-row">
+      <div class="rm-phase"><div class="rm-ph-label">Phase 6</div><div class="rm-ph-dur">Month 16+</div></div>
+      <div class="rm-body">
+        <h3>Enterprise Intelligence Fabric™ — Predictive Asset Intelligence and Institutional Compounding</h3>
+        <div class="rd">Deploy predictive asset recommendations — new projects receive curated bundles at kickoff based on domain and risk profile</div>
+        <div class="rd">Autonomous Knowledge Graph updates from project artifacts without human curation</div>
+        <div class="rd">Enterprise Learning Velocity™ reported quarterly to the Board as a primary strategic KPI</div>
+        <div class="rd">New AI engineer onboarding compressed by 50%+ — structured institutional knowledge replaces months of tribal discovery</div>
+        <div class="rd">The compounding effect is the competitive moat — you have built the Enterprise Intelligence Fabric™</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 09 CLOSING ── -->
+<section class="section section-dark" id="contact">
+  <div class="eyebrow">09 · Three Questions for Every CTO</div>
+  <h2 class="section-h">Start Here.<br>Today.</h2>
+  <p class="section-lead">Before any CTO proceeds with an Enterprise Intelligence OS investment, these three questions should be answerable with specificity. If the answer to any of them is "we don't know," that is the starting point.</p>
+
+  <div class="closing-3">
+    <div class="cq"><div class="cq-n">01</div><h3>Did our last AI project make the next one cheaper?</h3><p>If no specific asset can be traced from Project N that reduced the build cost of Project N+1, the organization is at Level 0 or Level 1. The Intelligence OS does not yet exist.</p></div>
+    <div class="cq"><div class="cq-n">02</div><h3>Can a new team find what the last team learned?</h3><p>If the answer depends on knowing the right person to ask, you are one departure away from losing that knowledge permanently. The OS makes knowledge structure-dependent, not person-dependent.</p></div>
+    <div class="cq"><div class="cq-n">03</div><h3>Is our Intelligence OS Score improving quarter over quarter?</h3><p>If you are not measuring Learning Velocity, you are managing AI by intuition. The EIOS Score™ converts institutional intelligence into a trackable, board-reportable indicator.</p></div>
+  </div>
+
+  <div class="final-cta">
+    <div class="fc-label">The Architecture Behind Enterprise Intelligence Fabric™</div>
+    <h2>Enterprise Intelligence<br><em>Operating System™</em></h2>
+    <p>The enterprises that win with AI will not necessarily have the best models. They will have the fastest learning systems — the ability to capture, standardize, reuse, and compound what every AI project teaches them. With security, governance, and measurable learning velocity at the foundation of every layer.</p>
+    <div class="cta-buttons">
+      <a href="https://linkedin.com/in/s-agi" target="_blank" rel="noopener" class="btn-primary">Connect on LinkedIn →</a>
+      <a href="https://sk4all.substack.com" target="_blank" rel="noopener" class="btn-secondary">Follow on Substack</a>
+      <a href="https://sk4all.github.io/enterprise-ai-os/" target="_blank" rel="noopener" class="btn-secondary">Enterprise AI OS Series</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <div class="f-brand">Srikanth K. — Enterprise AI OS Architect</div>
+    <div class="f-meta">Enterprise Intelligence Operating System™ · 2026 Reference Architecture</div>
+    <div class="f-meta" style="margin-top:4px;">AI Governance · Security · FinOps · Agentic AI · Learning Velocity</div>
+  </div>
+  <div class="f-links">
+    <a href="https://linkedin.com/in/s-agi" target="_blank" rel="noopener">linkedin.com/in/s-agi</a>
+    <a href="https://sk4all.substack.com" target="_blank" rel="noopener">sk4all.substack.com</a>
+    <a href="https://sk4all.github.io/enterprise-ai-os/" target="_blank" rel="noopener">enterprise-ai-os series</a>
+    <a href="https://github.com/sk4all" target="_blank" rel="noopener">github.com/sk4all</a>
+  </div>
+</footer>
+
+</body>
+</html>
