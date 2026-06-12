@@ -2,13 +2,21 @@
 
 **Your structured path to Enterprise Intelligence Fabric™**
 
-> *AI Capability ≠ Competitive Advantage. Learning Velocity = Competitive Advantage.*
+> *AI Capability ≠ Competitive Advantage. Intelligence Velocity = Competitive Advantage.*
+
+> *15% is the floor, not the target. The compounding is what happens over 36 months.*
+
+---
+
+## Open Source · MIT Licensed · Free Forever
+
+Star it · Fork it · Build on it · Share it
 
 ---
 
 ## What Is This?
 
-The **Enterprise Intelligence Operating System™ (EIOS™)** is a strategic blueprint and reference architecture for building a self-learning management layer that ensures every AI project leaves your enterprise with reusable assets — making every future project faster, cheaper, safer, and smarter.
+The **Enterprise Intelligence Operating System™ (EIOS™)** is a strategic blueprint and reference architecture for building a self-compounding intelligence layer that ensures every AI project leaves your enterprise with reusable assets — making every future project faster, cheaper, safer, and smarter.
 
 This is **not** another AI agent platform.
 This is the **management system above the platforms** — the operating layer that converts AI execution into compounding institutional intelligence.
@@ -31,7 +39,7 @@ Every AI project feeds this system. Every future project starts ahead because of
 
 ---
 
-## The Self-Learning Loop
+## The Self-Compounding Loop
 
 Every completed project flows through eight stages before its knowledge becomes available to the next project:
 
@@ -59,7 +67,9 @@ Every completed project flows through eight stages before its knowledge becomes 
 
 ---
 
-## The 15% Improvement Targets
+## The Improvement Framework
+
+> **15% is the provable floor at Level 3. Teams reach 30–50% at Level 4. At Level 5, percentage is the wrong metric — the system compounds structurally.**
 
 | Dimension | Metric | Target |
 |-----------|--------|--------|
